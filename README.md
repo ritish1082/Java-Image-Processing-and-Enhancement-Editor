@@ -5,6 +5,9 @@ manipulations, filtering, and pixel-level operations. The system includes functi
 brightening, and applying filters such as blur and sharpen to images represented as grids of pixels.
 The design is modular and open for extensions.
 
+![Loaded](res/GUI/2.jpg)
+
+
 ## MVC Design Pattern
 
 This application follows the MVC design pattern.
@@ -15,7 +18,6 @@ View: The output by which the user interacts with.
 
 
 ### Design techniques used in this application
-
 
 1. Factory method for loading and saving images
 
@@ -42,7 +44,7 @@ cd src
 java application.ApplicationRunner -file <path of script.txt>
 ```
 
-- See USEME.md for how to run specific commands in the application. 
+- See [USEME.md](https://github.com/ritish1082/Java-Image-Processing-and-Enhancement-Editor/blob/main/USEME.md) for how to run specific commands in the application. 
 
 ### Folder Structure
 
@@ -64,7 +66,6 @@ The following have been changed from the previous version
 3. To follow the MVVM design pattern we designed a view model as an adapter.
 3. New command were added in commands package to support downscaling.
 4. Methods were changed to support partial image manipulation operations.
-
 
 
 ## Image Citation
