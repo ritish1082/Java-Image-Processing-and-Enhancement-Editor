@@ -1,0 +1,82 @@
+# Script file to generate all the images in /res folder.
+# To run this file in intellij use arguments -fie ./res/script.txt
+
+# Load the original image named hatchShell from the given path
+load ./res/hatchShell.png hatchShell
+
+# Downscale image 1
+downscale 200 200 hatchShell hatchShell-200
+
+save ./res/hatchShell-200x200.png hatchShell-200
+
+# Downscale image 2
+downscale 400 250 hatchShell hatchShell-400
+
+save ./res/hatchShell-250x400.png hatchShell-400
+
+
+# Partial image manipulation of sepia
+load ./res/mask.png mask
+
+sepia hatchShell mask pim-sepia
+
+save ./res/hatchShell-PIM-sepia.png pim-sepia
+
+# Partial image manipulation of Blur
+blur hatchShell mask pim-blur
+
+save ./res/hatchShell-PIM-blur.png pim-blur
+
+#  Partial image manipulation of sharpen
+sharpen hatchShell mask pim-sharp
+
+save ./res/hatchShell-PIM-sharpen.png pim-sharp
+
+#  Partial image manipulation of Red component
+red-component hatchShell mask pim-rc
+
+save ./res/hatchShell-PIM-Red.png pim-rc
+
+#  Partial image manipulation of Green component
+green-component hatchShell mask pim-gc
+
+save ./res/hatchShell-PIM-Green.png pim-gc
+
+#  Partial image manipulation of Blue component
+blue-component hatchShell mask pim-bc
+
+save ./res/hatchShell-PIM-Blue.png pim-bc
+
+# Luma PIM
+luma-component hatchShell mask pim-luma
+
+save ./res/hatchShell-PIM-luma.png pim-luma
+
+# Intensity
+intensity-component hatchShell mask pim-int
+
+save ./res/hatchShell-PIM-intensity.png pim-int
+
+#Value
+value-component hatchShell mask pim-val
+
+save ./res/hatchShell-PIM-value.png pim-val
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

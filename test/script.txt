@@ -1,0 +1,127 @@
+# Load the image located at ../test/test.png and reference it as test
+load ./test/test.png test
+
+# Extract the red component from the test image and save it as test-red
+red-component test test-red
+save ./test/test-red.png test-red
+
+# Extract the green component from the test image and save it as test-green
+green-component test test-green
+save ./test/test-green.png test-green
+
+# Extract the blue component from the test image and save it as test-blue
+blue-component test test-blue
+save ./test/test-blue.png test-blue
+
+# Flip the test image horizontally and save it as test-horizontal
+horizontal-flip test test-horizontal
+save ./test/test-horizontal.png test-horizontal
+
+# Flip the test image vertically and save it as test-vertical
+vertical-flip test test-vertical
+save ./test/test-vertical.png test-vertical
+
+# Brighten the test image by 10 units and save it as test-bright
+brighten 10 test test-bright
+save ./test/test-bright.png test-bright
+
+# Darken the test image by 10 units and save it as test-bright
+brighten -10 test test-dark
+save ./test/test-dark.png test-dark
+
+# Extract the luma component from the test image and save it as test-luma
+luma-component test test-luma
+save ./test/test-luma.png test-luma
+
+# Extract the value component from the test image and save it as test-value
+value-component test test-value
+save ./test/test-value.png test-value
+
+# Extract the intensity component from the test image and save it as test-intensity
+intensity-component test test-intensity
+save ./test/test-intensity.png test-intensity
+
+# Apply sepia effect to the test image and save it as test-sepia
+sepia test test-sepia
+save ./test/test-sepia.png test-sepia
+
+# Apply blur effect to the test image and save it as test-blur
+blur test test-blur
+save ./test/test-blur.png test-blur
+
+# Apply sharpen effect to the test image and save it as test-sharpen
+sharpen test test-sharpen
+save ./test/test-sharpen.png test-sharpen
+
+# Split the test image into its RGB components and save them separately
+rgb-split test test-split-red test-split-green test-split-blue
+save ./test/test-split-red.png test-split-red
+save ./test/test-split-green.png test-split-green
+save ./test/test-split-blue.png test-split-blue
+
+# Combine the previously split RGB images back into a single image and save as test-combine
+rgb-combine test-combine test-split-red test-split-green test-split-blue
+save ./test/test-rgb-combine.png test-combine
+
+# Load the original image named hatchShell from the given path
+load ./res/hatchShell.png hatchShell
+
+# Generate histogram of the image
+histogram hatchShell hatchShell-histogram
+
+# Save histogram
+save ./res/hatchShell-histogram.jpg hatchShell-histogram
+
+
+# Color correction of the image
+color-correct hatchShell hatchShell-color-correction
+
+# Histogram Color corrected
+histogram hatchShell-color-correction color-corrected-histogram
+
+# Save color corrected histogram image
+save ./res/histogram-color-corrected.jpg color-corrected-histogram
+
+# Save color correction
+save ./res/hatchShell-color-correction.jpg hatchShell-color-correction
+
+
+# Levels adjustment of the image
+levels-adjust 20 100 200 hatchShell hatchShell-levels
+
+# Save levels adjusted
+save ./res/hatchShell-level-adjusted.jpg hatchShell-levels
+
+# Histogram of levels adjusted
+histogram hatchShell-levels levels-adjusted-histogram
+
+# Save histogram levels adjusted
+save ./res/hatchShell-level-adjusted-histogram.jpg levels-adjusted-histogram
+
+
+# Compression of the image
+compress 70 hatchShell hatchShell-compressed-70
+
+# Save compressed image
+save ./res/hatchShell-compressed-70.png hatchShell-compressed-70
+
+
+# Compression of the image
+compress 90 hatchShell hatchShell-compressed-90
+
+# Save compressed image
+save ./res/hatchShell-compressed-90.png hatchShell-compressed-90
+
+
+# Brighten image split view
+brighten 100 hatchShell hatchShell-brighten-split split 50
+
+# Save brighten split 50
+save ./res/hatchShell-brighten-split.jpg hatchShell-brighten-split
+
+
+# Blur image split view
+blur hatchShell hatchShell-blur-split split 70
+
+# Save blur split 50
+save ./res/hatchShell-blur-split.jpg hatchShell-blur-split
