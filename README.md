@@ -24,10 +24,15 @@ View: The output by which the user interacts with.
 To support various image formats we have created an ImageUtil class which creates ImagIO or PPM 
 images based on the file extension. This can be extended to support new image formats. 
 
-2. Adapter design adapter for MVVM design 
+2. Adapter design adapter for MVVM design
+   
 The adapter design is used to convert the images stored in the model into buffered images using the
 view model class. Any futures transformations between the model and view can be handled by this 
 class.
+
+3. Command Design Pattern
+
+To support various commands in the application we have used the CDP in the controller with an extensible pattern by storing commands in the hashmap.  
 
 ## How to run the application
 
